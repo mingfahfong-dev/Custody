@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sample Custody Log Viewer v4 — PMLB</title>
+<title>Sample Custody Log Viewer v5 — PMLB</title>
 <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB/ElEQVR42q2TO2tUURSFv33unZlMzItEkiAiCloogloEsRNFBGv/gJXYCGLQxiKFvX/CImIKEQTBxkrBCIpoocQYBY0QJ4/JZF737L0t7pCHiWn0wCrOYe911toP0XsnnH84qanxnwgc3EEETHcIFQjJLgQSoFCGrAVdfVujHLAM2vXtBKoO2kb695GevIx+fEbx3PjGr24QEry5QuvRrQ7bnwpMkEYNnZtGqwtk75/kyXQsZU3i7As8xvy+jUAVkZQwcABf+oGMHt+kPeD1ReKrB0hXT251k4pgaqgZFiPeqmFZG28sd1DFG0sggdKFcczAomLqmBqmRqpqYA5ZRNeqaLtNrFa21r9QwtYW0WhICLjZesc6FiKEImH4CPz6RuHQWF48ScjmpqlO3UEKJZKBUXR1ccOKOzJ/Y7/jDmmRpG8Eq1VI9h5cb62tLoAr3RdvIr0jSOUL1cd3cwVBSC125kCb6M8ZCClx9vU6gWcNhq5NUk8H0OV5hs5epcciy5O3CT1DBFUjh2NSwAw8KeeQFPYMUzx8Gmmt0vz+ifrnN3QdO4+5oDH+bRc6byHgKwu0v75lcOwSvUfP4C7UX95H2xlJCZLrp8oT7s7OyK02Pjwn6R8mKXXTfPeUysMJCAXcHZm5Mrj7OkvAYwvPmkixG2vWCOVeJCTgzm+R+S1fCWd64QAAAABJRU5ErkJggg==">
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEmUlEQVR42s2XTWxUVRTHf+e+j5nptCLWFAQr0BpiFMQIBo2aGBIW6MZoQtQFAioJCwUTNUo0uhBcSdhgVKIro4b4sdIYFgQ/kCABMUiKlkJphUIpSKfMx3vz3j0u3jil3y3F1JfcvLkzc9/5n//7n/+5V+y2RcoUXq7aKY2PqzrVAKaaAfv/ZUAqdx00H++lk9GAgFoQqTzIJPPxXmLGDWIYBgQ0ThargnGhnAc3NX4AUTH5v5gxQbhDCIhDJFtP+tmviVv3EOxcj7f8Vbylq8FaMGYU1i2IwXYeIvhyAzjeBBkQkqxVURuhNk6mcfIZa0fPyMYJjihErVZkMzoD0vfWfB2iPRujhYvg+EjNDWj+AthobOqNg6Tq0DhEvEyiIZ2oCK0FN4X30AZsz0mill04jYtx5t1bAThMNaiCCNrbRbllF+JlUbXJ92P6wIBXIBCVMbUNpB9+k6h9P8H+T0gvXYW/5ImxGbAR5S2L0eAyapxxAZC/X2/WIdkYB3fOEvTyeeKzxzDXzcQ0zK+8Uxmh5gXt6yY+2zKhipGLm5qG0YDtf7BxICyBlxrTjMQ44NegpVwlETNBDYhAGGKmzeD6TQcIf/+W3PZHya7cSmbZ84k/iDNKGcaAEJ38hdwHKxMDG9MHBpchYMsB5bafibqOoY5PdK6Vctu+pM6NGWTTkpSfatUHos7DqLVgdEwdyPlX5uhgJ1QbYS+dQbwMZtpMbO4cGhZGLCvxM4iXviKYIum6q2hGkgQ3fpbrVu0gOn2Ewo8fk1qwgtTCFUnGYgYKVpXSwS8od/yWgJCkF2jFlKoOOQITQ3xAozLUZsk8uJbwj+/p+24b/oIVZB5YM2IWcW8XwZ8/YfwatNSHBvkEaMUzJF2XCNTaITqWrhdv1qG9UHAamtBijvhSF5Kqwam/ZfgqUEvc0w6q2GIOd8at1Nz3FP6cu4hyPYSteyke/ArKAeJlUI0HxjqzcbYOV9ZaLiWoXT+x5igYWUipLFrMkVn8GNPXvE9sodTdSXZ2MwDlU79yccdqbG8XeOkBrV1OvzBLR+3papPMRUbs/Rrk8WbfTsNru+k7fpjOnVtwa+txamppWvMO4qUJTxygZ+sj4PgD9gpGVRl22LjSDRVV2z8fPFSxYZHssvVgXM588x5zn97M/I07EOPQe3QvqMVvuofUHcuxhRyKVOMYtRWRXu2IykiqDr/xTkDxp88k17KPoOcvSt0dpG9qTthUxZu7BBuFqEp1vVGrTGpocsckDtn4+EvkTx2l4/O3QS3dez5Fo/AKzfavUavX4FwgDrZwgbDzCN6s23DrptP83LvVn0989DKFzhay8xZRajuAipu4ZCWutK9rmBwCY7BBntTcu5n1xu5ElOWgyog4LgBB+yG6Ni+vzv91VGNVmdSIY8TPUmrdT/eH69Agj3gpxHGrwcKOI3RvX5Vs7VSwtn+9tD1z4zU5mYgx2MIl/MaF1N3/JH7jAjQsUmz5gb69n2GDPMbPJPRfue742vprdjQS42CDAhoWwXGrPcBk6pLtfaVd/2dnQ7UReGmMX9PffESSxhTHwx5W/gHhKAj13JXUIgAAAABJRU5ErkJggg==">
 <link rel="icon" type="image/png" sizes="192x192" href="data:image/png;base64,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">
@@ -14,299 +14,317 @@
   :root{
     --bg:#12151A;
     --panel:#1B2029;
+    --panel-2:#252C38;
     --panel-border:#2A313D;
+    --line:#3A4352;
     --text:#E8EAED;
     --text-dim:#8B94A3;
     --accent:#F2B705;
-    --accent-dark:#C9930A;
     --rust:#B5502A;
     --danger:#E5484D;
     --ok:#4CAF6D;
     --blue:#4C8DFF;
+    --ui:1;   /* text size step, set by the A- / A+ buttons */
+    --d:1;    /* spacing: 1 = comfortable, 0.6 = compact */
+    color-scheme:dark;   /* dark scrollbars, date picker and dropdown lists in Edge */
   }
-  *{box-sizing:border-box;}
-  html,body{margin:0; padding:0;}
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  /* everything is sized in rem, so it scales with the window: ~15px on a laptop up to ~19px on a large monitor */
+  html{ font-size:calc(clamp(15px, 0.35vw + 10px, 19px) * var(--ui)); scrollbar-color:#3A4352 var(--bg); }
   body{
-    background:var(--bg);
-    color:var(--text);
-    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", "SF Pro Text", system-ui, sans-serif;
-    font-size:15px;
-    line-height:1.5;
+    background:var(--bg); color:var(--text);
+    font-family:"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,sans-serif;
+    font-size:.95rem; line-height:1.45; font-variant-numeric:tabular-nums;
   }
-  .page{ max-width:1360px; margin:0 auto; padding:28px 32px 60px; }
+  ::selection{ background:rgba(242,183,5,.35); }
+  :focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+  button{ font-family:inherit; }
 
-  .site-header{ margin-bottom:22px; max-width:760px; }
-  .eyebrow{ font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--rust); font-weight:700; margin:0 0 6px; }
-  h1{ font-size:28px; margin:0; font-weight:800; letter-spacing:-0.01em; }
-  .sub{ color:var(--text-dim); font-size:14px; margin:8px 0 0; line-height:1.5; }
+  .page{ max-width:2800px; margin:0 auto; padding:calc(1rem * var(--d)) clamp(1rem, 2vw, 3rem) 3rem; }
+  .site-header{ margin-bottom:calc(.9rem * var(--d)); }
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; color:var(--rust); font-weight:700; margin:0 0 .2rem; }
+  h1{ font-size:1.6rem; margin:0; font-weight:800; letter-spacing:-0.01em; }
+  .sub{ color:var(--text-dim); font-size:.85rem; margin:.3rem 0 0; max-width:60rem; }
+  .panel{ background:var(--panel); border:1px solid var(--panel-border); border-radius:.75rem; padding:1rem; }
 
-  .panel{ background:var(--panel); border:1px solid var(--panel-border); border-radius:12px; padding:18px; }
-
-  /* --- drop zone --- */
-  .drop-panel-wrap{ max-width:560px; }
+  /* --- start screen --- */
+  .drop-panel-wrap{ max-width:38rem; }
   .drop-zone{
-    border:2px dashed var(--panel-border);
-    border-radius:12px;
-    padding:44px 24px;
-    text-align:center;
-    color:var(--text-dim);
-    font-size:14.5px;
+    border:2px dashed var(--panel-border); border-radius:.75rem; padding:2.2rem 1.5rem;
+    text-align:center; color:var(--text-dim);
   }
   .drop-zone.drag{ border-color:var(--accent); color:var(--text); background:rgba(242,183,5,.06); }
-  .drop-zone strong{ color:var(--text); }
   .file-btn{
-    display:inline-block; margin-top:14px; background:var(--accent); color:#1A1500;
-    border:none; border-radius:8px; padding:11px 20px; font-weight:700; font-size:14px; cursor:pointer;
+    display:inline-block; margin-top:.8rem; background:var(--accent); color:#1A1500; border:none;
+    border-radius:.5rem; padding:.6rem 1.2rem; font-weight:700; font-size:.9rem; cursor:pointer;
   }
   #fileInput{ display:none; }
+  .demo-row{ display:flex; align-items:center; justify-content:center; gap:.8rem; margin-top:1rem; color:var(--text-dim); font-size:.85rem; }
+  .demo-btn{
+    background:transparent; border:1px solid var(--accent); color:var(--accent); border-radius:.5rem;
+    padding:.5rem 1rem; font-weight:700; font-size:.85rem; cursor:pointer;
+  }
+  .demo-btn:hover{ background:rgba(242,183,5,.12); }
+  .demo-banner{
+    display:flex; align-items:center; justify-content:space-between; gap:.8rem;
+    background:rgba(242,183,5,.12); border:1px solid rgba(242,183,5,.5); color:var(--accent);
+    border-radius:.6rem; padding:.45rem 1rem; margin-bottom:calc(.6rem * var(--d)); font-size:.8rem;
+  }
+  .demo-banner b{ letter-spacing:.06em; text-transform:uppercase; }
+  .demo-banner .text-btn{ color:var(--accent); }
 
-  /* --- sticky control bar: summary + filters + view tabs, stays visible while the list scrolls under it --- */
+  /* --- ONE sticky toolbar row: views · filters · last-2-days summary · display controls --- */
   .control-bar{
-    position:sticky;
-    top:0;
-    z-index:20;
-    background:var(--bg);
-    border-bottom:1px solid var(--panel-border);
-    padding:14px 0 16px;
-    margin-bottom:22px;
+    position:sticky; top:0; z-index:20; background:var(--bg);
+    display:flex; flex-wrap:wrap; align-items:center; gap:.45rem .6rem;
+    padding:.5rem 0; margin-bottom:calc(.9rem * var(--d)); border-bottom:1px solid var(--panel-border);
   }
+  .view-toggle-row{ display:flex; gap:.2rem; background:#0E1116; border:1px solid var(--panel-border); border-radius:.55rem; padding:.18rem; }
+  .view-toggle-row button{
+    background:transparent; border:none; color:var(--text-dim); border-radius:.4rem;
+    padding:.32rem .85rem; font-size:.85rem; font-weight:700; cursor:pointer; white-space:nowrap;
+  }
+  .view-toggle-row button:hover{ color:var(--text); }
+  .view-toggle-row button.active{ background:var(--accent); color:#1A1500; }
+  .bar-sep{ width:1px; height:1.5rem; background:var(--line); margin:0 .15rem; }
 
-  /* --- compact dual summary --- */
-  .summary-row{ display:flex; gap:12px; flex-wrap:wrap; margin-bottom:12px; }
-  .summary-block{
-    flex:1; min-width:300px;
-    background:#0E1116; border:1px solid var(--panel-border); border-radius:8px;
-    padding:8px 14px; display:flex; align-items:center; gap:10px; flex-wrap:wrap;
-  }
-  .summary-block .label{
-    font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:.06em; color:var(--rust);
-    flex:0 0 auto;
-  }
-  .summary-block .stats-line{ font-size:13px; color:var(--text-dim); }
-  .summary-block .stats-line b{ color:var(--text); font-weight:800; }
-  .summary-block .ok{ color:var(--ok); font-weight:800; }
-  .summary-block .danger{ color:var(--danger); font-weight:800; }
-
-  /* --- filters, inline row --- */
-  .filter-row{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:12px; }
   select, input[type="search"], input[type="date"]{
-    background:#0E1116; border:1px solid var(--panel-border); border-radius:8px; color:var(--text);
-    font-size:13.5px; padding:9px 10px; outline:none; cursor:pointer;
+    background:#0E1116; border:1px solid var(--panel-border); border-radius:.45rem; color:var(--text);
+    font:inherit; font-size:.85rem; padding:.3rem .6rem; height:2.1rem; outline:none; cursor:pointer;
   }
+  select option{ background:#1B2029; color:#E8EAED; }
   input[type="search"], input[type="date"]{ cursor:text; }
   select:focus, input[type="search"]:focus, input[type="date"]:focus{ border-color:var(--accent); }
-  #searchInput{ flex:1; min-width:200px; }
-  .text-btn{
-    background:none; border:none; color:var(--text-dim); font-size:12.5px; text-decoration:underline;
-    cursor:pointer; padding:6px 4px; white-space:nowrap; margin-left:auto;
+  #searchInput{ flex:1 1 11rem; min-width:9rem; max-width:22rem; }
+  #vesselFilter{ max-width:13rem; }
+
+  .bar-summary{
+    display:flex; align-items:center; gap:.6rem; margin-left:auto; white-space:nowrap;
+    font-size:.8rem; color:var(--text-dim); background:#0E1116; border:1px solid var(--panel-border);
+    border-radius:.5rem; padding:.3rem .8rem; height:2.1rem;
   }
+  .sum-label{ font-size:.64rem; font-weight:800; letter-spacing:.07em; text-transform:uppercase; color:var(--rust); }
+  .bar-summary b, .summary-block b{ color:var(--text); font-weight:800; }
+  .ok{ color:var(--ok); font-weight:800; }
+  .danger{ color:var(--danger); font-weight:800; }
+  .bar-tools{ display:flex; align-items:center; gap:.3rem; }
+  .tool-btn{
+    background:#0E1116; border:1px solid var(--panel-border); color:var(--text-dim); border-radius:.45rem;
+    padding:.25rem .6rem; font-size:.8rem; font-weight:700; height:2.1rem; cursor:pointer;
+  }
+  .tool-btn:hover:not(:disabled){ color:var(--text); border-color:var(--text-dim); }
+  .tool-btn:disabled{ opacity:.35; cursor:default; }
+  .tool-btn.active{ background:var(--accent); border-color:var(--accent); color:#1A1500; }
+  .text-btn{ background:none; border:none; color:var(--text-dim); font-size:.78rem; text-decoration:underline; cursor:pointer; padding:.3rem .2rem; white-space:nowrap; }
   .text-btn:hover{ color:var(--text); }
 
-  /* --- view tabs, inline row --- */
-  .view-toggle-row{ display:flex; gap:8px; }
-  .view-toggle-row button{
-    background:#0E1116; border:1px solid var(--panel-border); color:var(--text-dim);
-    border-radius:8px; padding:9px 16px; font-size:13px; font-weight:700; cursor:pointer;
+  /* --- bottom "total" summary --- */
+  .summary-row{ display:flex; gap:.8rem; flex-wrap:wrap; }
+  .summary-block{
+    display:flex; align-items:center; gap:.7rem; flex-wrap:wrap; background:#0E1116;
+    border:1px solid var(--panel-border); border-radius:.5rem; padding:.45rem .9rem;
   }
-  .view-toggle-row button.active{ background:var(--accent); color:#1A1500; border-color:var(--accent); }
+  .summary-block .label{ font-size:.64rem; font-weight:800; text-transform:uppercase; letter-spacing:.07em; color:var(--rust); }
+  .summary-block .stats-line{ font-size:.82rem; color:var(--text-dim); }
 
   /* --- status badges --- */
   .status-pill{
-    display:inline-block; font-size:10px; font-weight:800; letter-spacing:.04em; text-transform:uppercase;
-    padding:3px 8px; border-radius:20px; flex:0 0 auto;
+    display:inline-block; font-size:.62rem; font-weight:800; letter-spacing:.04em; text-transform:uppercase;
+    padding:.12rem .5rem; border-radius:1rem; flex:0 0 auto;
   }
   .status-pill.verified{ background:rgba(76,175,109,.18); color:var(--ok); }
   .status-pill.duplicate{ background:rgba(229,72,77,.18); color:var(--danger); }
   .status-pill.unmatched{ background:rgba(242,183,5,.18); color:var(--accent); }
   .status-pill.awaiting{ background:rgba(139,148,163,.18); color:var(--text-dim); }
-  .row-id .status-pill, td .status-pill{ margin-left:8px; }
+  .status-pill.combined{ background:rgba(76,141,255,.18); color:var(--blue); }
+  .row-id .status-pill, td .status-pill{ margin-left:.4rem; }
 
-  /* --- card grid (used by split view & grouped view) --- */
-  .card-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:10px; }
+  /* --- cards (Overview, Drop-off / Pickup) --- */
+  .card-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(16rem, 1fr)); gap:calc(.4rem * var(--d)); }
   .row-card{
-    display:flex; align-items:flex-start; gap:10px; background:var(--panel); border:1px solid var(--panel-border);
-    border-radius:10px; padding:12px 14px;
+    display:flex; align-items:flex-start; gap:.55rem; background:var(--panel); border:1px solid var(--panel-border);
+    border-radius:.55rem; padding:calc(.42rem * var(--d)) .7rem;
   }
-  .row-dot{ width:9px; height:9px; border-radius:50%; flex:0 0 auto; margin-top:6px; }
+  .row-dot{ width:.55rem; height:.55rem; border-radius:50%; flex:0 0 auto; margin-top:.45rem; }
   .row-dot.drop{ background:var(--blue); }
   .row-dot.pick{ background:var(--accent); }
   .row-main{ flex:1; min-width:0; }
-  .row-id{ font-family:"SF Mono", "Cascadia Mono", Menlo, Consolas, monospace; font-weight:700; font-size:14.5px; word-break:break-all; }
-  .row-meta{ font-size:12px; color:var(--text-dim); margin-top:4px; }
-  .row-time{ font-size:12px; color:var(--text-dim); flex:0 0 auto; white-space:nowrap; text-align:right; }
+  .row-id{ font-family:"Cascadia Mono",Consolas,"SF Mono",Menlo,monospace; font-weight:700; font-size:.88rem; word-break:break-all; }
+  .row-meta{ font-size:.76rem; color:var(--text-dim); margin-top:.05rem; }
+  .row-meta .v{ color:var(--text); font-weight:700; }
+  .row-time{ font-size:.78rem; color:var(--text-dim); flex:0 0 auto; white-space:nowrap; text-align:right; }
+  .empty-msg{ color:var(--text-dim); font-size:.9rem; text-align:center; padding:1.5rem 0; grid-column:1 / -1; }
 
-  /* --- split view --- */
-  .split-wrap{ display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:start; }
+  /* --- Drop-off / Pickup tab --- */
+  .split-wrap{ display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; align-items:start; }
   .split-col-heading{
-    font-size:13px; font-weight:800; text-transform:uppercase; letter-spacing:.05em; color:var(--text-dim);
-    padding:0 0 12px 12px; border-left:3px solid var(--panel-border); margin-bottom:2px;
+    font-size:.8rem; font-weight:800; text-transform:uppercase; letter-spacing:.05em; color:var(--text-dim);
+    padding:0 0 .5rem .7rem; border-left:.2rem solid var(--panel-border); margin-bottom:.3rem;
   }
   .split-col-heading.drop{ border-left-color:var(--blue); }
   .split-col-heading.pick{ border-left-color:var(--accent); }
 
-  /* --- grouped by date & location --- */
-  .date-group{ margin:0 0 52px; }
-  /* one big banner per date; it sticks just under the control bar while that date's rows scroll past */
-  .date-banner{
-    position:sticky; top:var(--bar-h, 160px); z-index:15;
-    display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;
-    background:#262D39; border:1px solid #3A4352; border-left:8px solid var(--accent);
-    border-radius:10px; padding:14px 22px; margin-bottom:22px;
-    box-shadow:0 10px 18px rgba(0,0,0,.4);
-  }
-  .date-main{ display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; }
-  .date-dow{ font-size:13px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); }
-  .date-full{ font-size:24px; font-weight:800; letter-spacing:-0.01em; }
-  .date-sub{ font-size:11.5px; color:var(--text-dim); margin-top:3px; }
+  /* --- date separation --- */
   .date-tag{
-    font-size:10.5px; font-weight:800; letter-spacing:.08em; text-transform:uppercase;
-    background:var(--accent); color:#1A1500; border-radius:20px; padding:3px 11px; align-self:center;
+    font-size:.62rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase;
+    background:var(--accent); color:#1A1500; border-radius:1rem; padding:.12rem .6rem; align-self:center;
   }
-  .date-tag.yesterday{ background:#3A4352; color:var(--text); }
-  .date-stats{ display:flex; gap:18px; font-size:13px; color:var(--text-dim); align-items:center; flex-wrap:wrap; }
-  .date-stats b{ color:var(--text); font-size:15px; }
-  .date-stats .dot{ display:inline-block; width:9px; height:9px; border-radius:50%; margin-right:7px; }
+  .date-tag.yesterday{ background:var(--line); color:var(--text); }
+  .col-date{
+    grid-column:1 / -1; display:flex; align-items:baseline; gap:.6rem;
+    margin:calc(.9rem * var(--d)) 0 calc(.15rem * var(--d)); padding:.4rem .8rem;
+    background:var(--panel-2); border-left:.3rem solid var(--accent); border-radius:.45rem;
+  }
+  .col-date:first-child{ margin-top:0; }
+  .col-date .dow{ font-size:.66rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); }
+  .col-date .d{ font-size:.9rem; font-weight:800; }
+  .col-date .n{ margin-left:auto; color:var(--text-dim); font-size:.75rem; }
+
+  /* --- Overview: date → shift → location (side by side on wide screens) → drop-off | pickup --- */
+  .date-group{ margin:0 0 calc(1.6rem * var(--d)); }
+  .date-banner{
+    position:sticky; top:var(--bar-h, 3.6rem); z-index:15;
+    display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;
+    background:var(--panel-2); border:1px solid var(--line); border-left:.4rem solid var(--accent);
+    border-radius:.6rem; padding:calc(.45rem * var(--d)) 1rem; margin-bottom:calc(.7rem * var(--d));
+    box-shadow:0 .5rem 1rem rgba(0,0,0,.35);
+  }
+  .date-main{ display:flex; align-items:baseline; gap:.7rem; flex-wrap:wrap; }
+  .date-dow{ font-size:.75rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase; color:var(--accent); }
+  .date-full{ font-size:1.3rem; font-weight:800; letter-spacing:-0.01em; }
+  .date-sub{ font-size:.72rem; color:var(--text-dim); }
+  .date-stats{ display:flex; gap:1.1rem; font-size:.8rem; color:var(--text-dim); align-items:center; flex-wrap:wrap; }
+  .date-stats b{ color:var(--text); font-size:.95rem; }
+  .date-stats .dot{ display:inline-block; width:.55rem; height:.55rem; border-radius:50%; margin-right:.4rem; }
   .date-stats .dot.drop{ background:var(--blue); }
   .date-stats .dot.pick{ background:var(--accent); }
 
-  /* date dividers inside the Drop-off / Pickup columns and the table */
-  .col-date{
-    grid-column:1 / -1; display:flex; align-items:baseline; gap:10px; margin:18px 0 4px; padding:9px 14px;
-    background:#262D39; border-left:6px solid var(--accent); border-radius:8px;
+  .shift-heading{
+    font-size:.85rem; font-weight:700; margin:calc(.7rem * var(--d)) 0 calc(.4rem * var(--d));
+    padding:.1rem 0 .1rem .6rem; border-left:.18rem solid var(--line);
   }
-  .col-date:first-child{ margin-top:0; }
-  .col-date .dow{ font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); }
-  .col-date .d{ font-size:15px; font-weight:800; }
-  .col-date .n{ margin-left:auto; color:var(--text-dim); font-size:12.5px; }
-  tr.date-row td{
-    background:#262D39; border-left:6px solid var(--accent); font-weight:800; font-size:14.5px;
-    padding:13px 16px; border-top:1px solid #3A4352;
+  .shift-heading .range{ color:var(--text-dim); font-weight:500; font-size:.75rem; margin-left:.3rem; }
+  .loc-row{ display:grid; grid-template-columns:minmax(0, 1fr); gap:calc(.7rem * var(--d)) 1.4rem; }
+  .loc-block{ min-width:0; }
+  .loc-heading{
+    font-size:.72rem; font-weight:800; text-transform:uppercase; letter-spacing:.06em; color:var(--text-dim);
+    padding:.2rem 0 .2rem .6rem; border-left:.2rem solid var(--accent); margin-bottom:calc(.35rem * var(--d));
   }
-  tr.date-row td .dow{ color:var(--accent); font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; margin-right:10px; }
-  tr.date-row td .n{ color:var(--text-dim); font-weight:600; font-size:12.5px; margin-left:14px; }
-  tr.date-row:hover td{ background:#262D39; }
+  .loc-heading.finucane{ border-left-color:var(--blue); }
+  .loc-heading .n{ color:var(--text); margin-left:.3rem; }
+  .mini-split{ display:grid; grid-template-columns:1fr 1fr; gap:.9rem; }
+  .mini-split-heading{
+    font-size:.68rem; font-weight:800; text-transform:uppercase; letter-spacing:.04em; color:var(--text-dim);
+    margin-bottom:.3rem; padding-left:.5rem; border-left:.15rem solid var(--panel-border);
+  }
+  .mini-split-heading.drop{ border-left-color:var(--blue); }
+  .mini-split-heading.pick{ border-left-color:var(--accent); }
+  @media (min-width:1500px){
+    /* wide screens: Nelson Point on the left, Finucane Island on the right, always in the same place */
+    .loc-row{ grid-template-columns:repeat(2, minmax(0, 1fr)); }
+    .loc-block.nelson{ grid-column:1; }
+    .loc-block.finucane{ grid-column:2; }
+  }
 
-  .row-vessel{ font-size:12.5px; font-weight:700; letter-spacing:.02em; margin-top:3px; }
-  .status-pill.combined{ background:rgba(76,141,255,.18); color:var(--blue); }
-  #vesselFilter{ max-width:230px; }
-
-  /* --- verification tab: one bag per line, drop-off on the left, pickup on the right --- */
-  .ver-chips{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px; }
+  /* --- Verification tab --- */
+  .ver-chips{ display:flex; gap:.45rem; flex-wrap:wrap; margin-bottom:calc(.7rem * var(--d)); }
   .ver-chip{
-    background:#0E1116; border:1px solid var(--panel-border); color:var(--text-dim); border-radius:20px;
-    padding:7px 15px; font-size:13px; font-weight:700; cursor:pointer;
+    background:#0E1116; border:1px solid var(--panel-border); color:var(--text-dim); border-radius:1rem;
+    padding:.28rem .9rem; font-size:.8rem; font-weight:700; cursor:pointer;
   }
-  .ver-chip b{ color:var(--text); margin-left:7px; }
+  .ver-chip b{ color:var(--text); margin-left:.4rem; }
   .ver-chip:hover{ border-color:var(--text-dim); }
   .ver-chip.active{ background:var(--accent); border-color:var(--accent); color:#1A1500; }
   .ver-chip.active b{ color:#1A1500; }
-  .ver-hint{ color:var(--text-dim); font-size:13px; margin:-4px 0 16px; }
-  .ver-group{ margin-bottom:46px; }
-  .ver-banner{
-    display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;
-    background:#262D39; border:1px solid #3A4352; border-left:8px solid var(--blue);
-    border-radius:10px; padding:14px 22px; margin-bottom:12px;
+  .ver-hint{ color:var(--text-dim); font-size:.8rem; margin:0 0 calc(.7rem * var(--d)); }
+  /* several vessels side by side on wide screens; a single vessel stays a readable width */
+  .ver-groups{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 52rem), 72rem));
+    gap:calc(1.2rem * var(--d)) 1.8rem; justify-content:start; align-items:start;
   }
-  .ver-vessel{ font-size:22px; font-weight:800; letter-spacing:-0.01em; }
-  .ver-vsub{ font-size:12.5px; color:var(--text-dim); margin-top:2px; }
-  .ver-stats{ display:flex; gap:18px; font-size:13px; color:var(--text-dim); flex-wrap:wrap; }
-  .ver-stats b{ color:var(--text); font-size:15px; }
+  .ver-group{ min-width:0; }
+  .ver-banner{
+    display:flex; align-items:center; justify-content:space-between; gap:.8rem; flex-wrap:wrap;
+    background:var(--panel-2); border:1px solid var(--line); border-left:.4rem solid var(--blue);
+    border-radius:.6rem; padding:calc(.45rem * var(--d)) 1rem; margin-bottom:calc(.5rem * var(--d));
+  }
+  .ver-vessel{ font-size:1.2rem; font-weight:800; letter-spacing:-0.01em; }
+  .ver-vsub{ font-size:.75rem; color:var(--text-dim); }
+  .ver-stats{ display:flex; gap:1rem; font-size:.8rem; color:var(--text-dim); flex-wrap:wrap; }
+  .ver-stats b{ color:var(--text); font-size:.92rem; }
   .ver-stats .ok b{ color:var(--ok); }
   .ver-stats .bad b{ color:var(--danger); }
-  .ver-colhead, .ver-row{ display:grid; grid-template-columns:minmax(0,1fr) 250px minmax(0,1fr); gap:12px; }
+  .ver-colhead, .ver-row{ display:grid; grid-template-columns:minmax(0, 1fr) 11.5rem minmax(0, 1fr); gap:.6rem; }
   .ver-colhead{
-    position:sticky; top:var(--bar-h, 160px); z-index:14; background:var(--bg);
-    padding:9px 0; margin-bottom:8px; border-bottom:1px solid var(--panel-border);
-    font-size:12px; font-weight:800; letter-spacing:.12em; text-transform:uppercase;
+    position:sticky; top:var(--bar-h, 3.6rem); z-index:14; background:var(--bg);
+    padding:.35rem 0; margin-bottom:calc(.35rem * var(--d)); border-bottom:1px solid var(--panel-border);
+    font-size:.7rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase;
   }
-  .ver-colhead .l{ color:var(--blue); padding-left:6px; }
+  .ver-colhead .l{ color:var(--blue); padding-left:.4rem; }
   .ver-colhead .m{ color:var(--text-dim); text-align:center; }
-  .ver-colhead .r{ color:var(--accent); padding-left:6px; }
-  .ver-row{ margin-bottom:8px; align-items:stretch; }
+  .ver-colhead .r{ color:var(--accent); padding-left:.4rem; }
+  .ver-row{ margin-bottom:calc(.35rem * var(--d)); align-items:stretch; }
   .ver-cell{
-    background:var(--panel); border:1px solid var(--panel-border); border-radius:10px; padding:11px 14px;
-    display:flex; flex-direction:column; gap:8px; justify-content:center; min-height:58px;
+    background:var(--panel); border:1px solid var(--panel-border); border-radius:.55rem;
+    padding:calc(.4rem * var(--d)) .7rem; display:flex; flex-direction:column; gap:.3rem; justify-content:center;
+    min-height:2.6rem;
   }
-  .ver-cell.drop{ border-left:4px solid var(--blue); }
-  .ver-cell.pick{ border-left:4px solid var(--accent); }
+  .ver-cell.drop{ border-left:.22rem solid var(--blue); }
+  .ver-cell.pick{ border-left:.22rem solid var(--accent); }
   .ver-cell.dup{ border-color:var(--danger); background:rgba(229,72,77,.07); }
-  .ver-cell.empty{ background:transparent; border-style:dashed; color:var(--text-dim); font-size:13px; align-items:flex-start; }
-  .ver-cell.empty span{ display:block; font-size:12px; margin-top:2px; }
+  .ver-cell.empty{ background:transparent; border-style:dashed; color:var(--text-dim); font-size:.8rem; align-items:flex-start; }
+  .ver-cell.empty span{ display:block; font-size:.74rem; }
   .ver-cell.empty.missing{ border-color:rgba(242,183,5,.65); color:var(--accent); font-weight:700; }
-  .ver-entry{ display:flex; align-items:baseline; justify-content:space-between; gap:12px; flex-wrap:wrap; }
-  .ver-when b{ font-family:"SF Mono", "Cascadia Mono", Menlo, Consolas, monospace; font-size:15px; }
-  .ver-when span{ color:var(--text-dim); font-size:12px; margin-left:10px; }
-  .ver-who{ font-size:13px; }
-  .ver-dupnote{ color:var(--danger); font-size:11.5px; font-weight:800; letter-spacing:.03em; }
+  .ver-entry{ display:flex; align-items:baseline; justify-content:space-between; gap:.6rem; flex-wrap:wrap; }
+  .ver-when b{ font-family:"Cascadia Mono",Consolas,"SF Mono",Menlo,monospace; font-size:.9rem; }
+  .ver-when span{ color:var(--text-dim); font-size:.74rem; margin-left:.5rem; }
+  .ver-who{ font-size:.8rem; }
+  .ver-dupnote{ color:var(--danger); font-size:.68rem; font-weight:800; letter-spacing:.03em; }
   .ver-mid{
-    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:5px;
-    text-align:center; padding:8px 6px; border-radius:10px;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.15rem;
+    text-align:center; padding:.3rem .3rem; border-radius:.55rem;
   }
   .ver-row.is-verified .ver-mid{ background:rgba(76,175,109,.09); }
   .ver-row.is-duplicate .ver-mid{ background:rgba(229,72,77,.09); }
   .ver-row.is-unmatched .ver-mid{ background:rgba(242,183,5,.09); }
-  .ver-id{ font-family:"SF Mono", "Cascadia Mono", Menlo, Consolas, monospace; font-weight:800; font-size:15px; word-break:break-all; }
-  .ver-sub{ font-size:11.5px; color:var(--text-dim); }
+  .ver-id{ font-family:"Cascadia Mono",Consolas,"SF Mono",Menlo,monospace; font-weight:800; font-size:.85rem; word-break:break-all; }
+  .ver-sub{ font-size:.68rem; color:var(--text-dim); }
   .ver-sub.warn{ color:var(--accent); }
-  .ver-pills{ display:flex; gap:6px; flex-wrap:wrap; justify-content:center; }
+  .ver-pills{ display:flex; gap:.3rem; flex-wrap:wrap; justify-content:center; }
   .ver-pills .status-pill{ margin-left:0; }
 
-  .demo-row{ display:flex; align-items:center; justify-content:center; gap:12px; margin-top:16px; color:var(--text-dim); font-size:13.5px; }
-  .demo-btn{
-    background:transparent; border:1px solid var(--accent); color:var(--accent); border-radius:8px;
-    padding:9px 16px; font-weight:700; font-size:13.5px; cursor:pointer;
+  /* --- Table tab: header row stays under the toolbar while scrolling --- */
+  .table-wrap{ overflow-x:clip; border:1px solid var(--panel-border); border-radius:.6rem; }
+  table{ border-collapse:collapse; width:100%; font-size:.85rem; }
+  th, td{ padding:calc(.4rem * var(--d)) .8rem; text-align:left; border-bottom:1px solid var(--panel-border); }
+  th{
+    position:sticky; top:var(--bar-h, 3.6rem); z-index:5; background:#0E1116; color:var(--text-dim);
+    font-size:.68rem; text-transform:uppercase; letter-spacing:.05em; cursor:pointer; user-select:none; white-space:nowrap;
+    box-shadow:inset 0 -1px 0 var(--line);
   }
-  .demo-btn:hover{ background:rgba(242,183,5,.12); }
-  .demo-banner{
-    display:flex; align-items:center; justify-content:space-between; gap:12px;
-    background:rgba(242,183,5,.12); border:1px solid rgba(242,183,5,.5); color:var(--accent);
-    border-radius:10px; padding:10px 16px; margin-bottom:14px; font-size:13px;
-  }
-  .demo-banner b{ letter-spacing:.06em; text-transform:uppercase; }
-  .demo-banner .text-btn{ margin-left:0; color:var(--accent); }
-  .loc-group{ margin-bottom:14px; }
-  .loc-heading{
-    font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:var(--text-dim);
-    padding:6px 0 8px 12px; border-left:3px solid var(--accent); margin-bottom:8px;
-  }
-  .loc-heading.finucane{ border-left-color:var(--blue); }
-
-  .shift-heading{
-    font-size:13px; font-weight:700; color:var(--text); margin:0 0 10px 2px;
-    padding:4px 0 4px 10px; border-left:2px solid var(--panel-border);
-  }
-  .shift-heading .range{ color:var(--text-dim); font-weight:500; font-size:12px; margin-left:4px; }
-
-  .mini-split{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
-  .mini-split-heading{
-    font-size:10.5px; font-weight:800; text-transform:uppercase; letter-spacing:.04em; color:var(--text-dim);
-    margin-bottom:6px; padding-left:8px; border-left:2px solid var(--panel-border);
-  }
-  .mini-split-heading.drop{ border-left-color:var(--blue); }
-  .mini-split-heading.pick{ border-left-color:var(--accent); }
-
-  /* --- table view --- */
-  .table-wrap{ overflow-x:auto; border:1px solid var(--panel-border); border-radius:10px; }
-  table{ border-collapse:collapse; width:100%; font-size:13.5px; }
-  th, td{ padding:12px 16px; text-align:left; border-bottom:1px solid var(--panel-border); }
-  th{ background:#0E1116; color:var(--text-dim); font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; cursor:pointer; user-select:none; white-space:nowrap; }
   th:hover{ color:var(--text); }
   th.sorted::after{ content:" ▾"; color:var(--accent); }
   th.sorted.asc::after{ content:" ▴"; }
   tbody tr:last-child td{ border-bottom:none; }
   tbody tr:hover{ background:#20262F; }
+  tr.date-row td{
+    background:var(--panel-2); border-left:.3rem solid var(--accent); font-weight:800; font-size:.9rem;
+    padding:calc(.45rem * var(--d)) .8rem; border-top:1px solid var(--line);
+  }
+  tr.date-row td .dow{ color:var(--accent); font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; margin-right:.6rem; }
+  tr.date-row td .n{ color:var(--text-dim); font-weight:600; font-size:.78rem; margin-left:.9rem; }
+  tr.date-row:hover td{ background:var(--panel-2); }
 
-  .empty-msg{ color:var(--text-dim); font-size:14px; text-align:center; padding:32px 0; grid-column:1/-1; }
-  footer{ text-align:center; color:#4A5261; font-size:11px; letter-spacing:.04em; padding-top:32px; }
+  footer{ text-align:center; color:#4A5261; font-size:.7rem; letter-spacing:.04em; padding-top:1.5rem; }
 
-  @media (max-width: 900px){
+  @media (max-width:1100px){
+    .split-wrap, .mini-split{ grid-template-columns:1fr; }
     .ver-colhead{ display:none; }
     .ver-row{ grid-template-columns:1fr; }
-  }
-  @media (max-width: 720px){
-    .split-wrap{ grid-template-columns:1fr; }
-    .mini-split{ grid-template-columns:1fr; }
-    .summary-block{ min-width:100%; }
+    .table-wrap{ overflow-x:auto; }
+    th{ position:static; }
+    .bar-summary{ margin-left:0; }
   }
 </style>
 </head>
@@ -314,7 +332,7 @@
 <div class="page">
 
   <header class="site-header">
-    <p class="eyebrow">PMLB · Sample Custody · v4</p>
+    <p class="eyebrow">PMLB · Sample Custody · v5</p>
     <h1>Custody Log Viewer</h1>
     <p class="sub">Load a CSV exported from the Custody Scanner to review drop-offs and pickups — matched pairs are flagged as verified, repeat scans as duplicates.</p>
   </header>
@@ -339,39 +357,41 @@
     </div>
 
     <div class="control-bar">
-      <div class="summary-row" id="summaryRow"></div>
-
-      <div class="filter-row">
-        <select id="dateRangeFilter">
-          <option value="2" selected>Last 2 days</option>
-          <option value="7">Last 7 days</option>
-          <option value="30">Last 30 days</option>
-          <option value="">All time</option>
-          <option value="custom">Custom range…</option>
-        </select>
-        <input type="date" id="dateFromInput" style="display:none;">
-        <input type="date" id="dateToInput" style="display:none;">
-        <select id="locationFilter">
-          <option value="">All locations</option>
-          <option value="Nelson Point">Nelson Point</option>
-          <option value="Finucane Island">Finucane Island</option>
-        </select>
-        <select id="vesselFilter"><option value="">All vessels</option></select>
-        <select id="berthFilter"><option value="">All berths</option></select>
-        <select id="roleFilter">
-          <option value="">All roles</option>
-          <option value="Sampler">Sampler</option>
-          <option value="Analyst">Analyst</option>
-        </select>
-        <input type="search" id="searchInput" placeholder="Search sample ID, vessel or name…">
-        <button class="text-btn" id="loadAnotherBtn" type="button">Load a different CSV</button>
-      </div>
-
       <div class="view-toggle-row">
         <button id="overviewBtn" class="active" type="button">Overview</button>
         <button id="verifyBtn" type="button">Verification</button>
         <button id="splitBtn" type="button">Drop-off / Pickup</button>
         <button id="tableBtn" type="button">Table</button>
+      </div>
+      <span class="bar-sep"></span>
+      <select id="dateRangeFilter" title="Date range">
+        <option value="2" selected>Last 2 days</option>
+        <option value="7">Last 7 days</option>
+        <option value="30">Last 30 days</option>
+        <option value="">All time</option>
+        <option value="custom">Custom range…</option>
+      </select>
+      <input type="date" id="dateFromInput" style="display:none;" title="From">
+      <input type="date" id="dateToInput" style="display:none;" title="To">
+      <select id="locationFilter" title="Location">
+        <option value="">All locations</option>
+        <option value="Nelson Point">Nelson Point</option>
+        <option value="Finucane Island">Finucane Island</option>
+      </select>
+      <select id="vesselFilter" title="Vessel"><option value="">All vessels</option></select>
+      <select id="berthFilter" title="Berth"><option value="">All berths</option></select>
+      <select id="roleFilter" title="Role">
+        <option value="">All roles</option>
+        <option value="Sampler">Sampler</option>
+        <option value="Analyst">Analyst</option>
+      </select>
+      <input type="search" id="searchInput" placeholder="Search sample ID, vessel or name…">
+      <div class="bar-summary" id="summaryRow"></div>
+      <div class="bar-tools">
+        <button class="tool-btn" id="textSmaller" type="button" title="Smaller text">A−</button>
+        <button class="tool-btn" id="textLarger" type="button" title="Larger text">A+</button>
+        <button class="tool-btn" id="compactBtn" type="button" title="Tighter spacing between rows and groups">Compact</button>
+        <button class="text-btn" id="loadAnotherBtn" type="button">Load a different CSV</button>
       </div>
     </div>
 
@@ -418,12 +438,12 @@
 
     </main>
 
-    <div class="panel" id="totalSummaryPanel" style="margin-top:24px;">
-      <div class="summary-row" style="margin-bottom:0;" id="totalSummaryRow"></div>
+    <div class="panel" id="totalSummaryPanel" style="margin-top:1.2rem; padding:.6rem .8rem;">
+      <div class="summary-row" id="totalSummaryRow"></div>
     </div>
   </div>
 
-  <footer>Parsed locally in this browser · nothing is uploaded anywhere · v4</footer>
+  <footer>Parsed locally in this browser · nothing is uploaded anywhere · v5</footer>
 </div>
 
 <script>
@@ -826,9 +846,7 @@
   // adjustable date-range/location/role/search filters that control the visible list
   function renderTopSummary() {
     const last2 = records.filter(r => isWithinLastNDays(r.date, 2));
-    $("summaryRow").innerHTML = `
-      <div class="summary-block"><span class="label">Last 2 days</span><span class="stats-line">${statsLineHtml(last2)}</span></div>
-    `;
+    $("summaryRow").innerHTML = `<span class="sum-label">Last 2 days</span><span>${statsLineHtml(last2)}</span>`;
   }
   function renderBottomSummary() {
     $("totalSummaryRow").innerHTML = `
@@ -840,21 +858,22 @@
 
   // ---------- split view: drop-offs left, pickups right ----------
   function combinedPillHtml(r) { return r.combinedWith ? '<span class="status-pill combined">Combined</span>' : ""; }
-  function vesselLineHtml(r) { return r.vessel ? `<div class="row-vessel">${esc(r.vessel)}</div>` : ""; }
   function metaJoin(parts) { return parts.filter(Boolean).join(" · "); }
-  function combinedNoteHtml(r) { return r.combinedWith ? `<br>Combined with ${esc(r.combinedWith)}` : ""; }
+  function vesselSpan(r) { return r.vessel ? `<span class="v">${esc(r.vessel)}</span>` : ""; }
+  function partnerBit(r) { return r.combinedWith ? "⇄ " + esc(r.combinedWith) : ""; }
 
-  function splitCardHtml(r) {
+  // a scan card: line 1 = sample ID + status, line 2 = vessel · berth · who (· combined partner)
+  function cardHtml(r, parts) {
     return `<div class="row-card">
       <span class="row-dot ${taskDotClass(r)}"></span>
       <div class="row-main">
         <div class="row-id">${esc(r.sampleId)} ${statusPillHtml(r)}${combinedPillHtml(r)}</div>
-        ${vesselLineHtml(r)}
-        <div class="row-meta">${metaJoin([esc(r.location), esc(r.berthDisplay), esc(r.username)])}${combinedNoteHtml(r)}</div>
+        <div class="row-meta">${metaJoin(parts)}</div>
       </div>
       <div class="row-time">${esc(r.time)}</div>
     </div>`;
   }
+  function splitCardHtml(r) { return cardHtml(r, [vesselSpan(r), esc(r.location), esc(r.berthDisplay), esc(r.username), partnerBit(r)]); }
 
   // one column of the split view, with a date divider each time the day changes
   function splitColumnHtml(list) {
@@ -883,6 +902,8 @@
   }
 
   // ---------- overview: grouped by date, then shift (Day 06:00–18:00 / Night 18:00–06:00), then location ----------
+  function locRank(l) { return l === "Nelson Point" ? 0 : l === "Finucane Island" ? 1 : 2; }
+
   function renderOverview(list) {
     const el = $("overviewView");
     if (list.length === 0) { el.innerHTML = '<p class="empty-msg">No scans match these filters.</p>'; return; }
@@ -897,47 +918,34 @@
         const shiftRows = rowsForDate.filter(r => r.shift === shiftName);
         if (shiftRows.length === 0) return "";
         const byLoc = {};
-        shiftRows.forEach(r => { (byLoc[r.location || "Unknown"] = byLoc[r.location || "Unknown"] || []).push(r); });
-        const locs = Object.keys(byLoc).sort();
+        shiftRows.forEach(r => { const k = r.location || "Unknown"; (byLoc[k] = byLoc[k] || []).push(r); });
+        const locs = Object.keys(byLoc).sort((a, b) => locRank(a) - locRank(b) || a.localeCompare(b));
 
-        const locHtml = locs.map(loc => {
+        const blocks = locs.map(loc => {
           const rowsAll = [...byLoc[loc]].sort((a, b) => a.shiftSortSeconds - b.shiftSortSeconds);
           const drops = rowsAll.filter(r => r.role === "Sampler");
           const picks = rowsAll.filter(r => r.role === "Analyst");
-          const locClass = loc === "Finucane Island" ? "finucane" : "";
-
-          const miniCard = (r) => `
-            <div class="row-card">
-              <span class="row-dot ${taskDotClass(r)}"></span>
-              <div class="row-main">
-                <div class="row-id">${esc(r.sampleId)} ${statusPillHtml(r)}${combinedPillHtml(r)}</div>
-                ${vesselLineHtml(r)}
-                <div class="row-meta">${metaJoin([esc(r.berthDisplay), esc(r.username)])}${combinedNoteHtml(r)}</div>
-              </div>
-              <div class="row-time">${esc(r.time)}</div>
-            </div>
-          `;
-          const dropHtml = drops.length ? drops.map(miniCard).join("") : '<p class="empty-msg" style="padding:10px 0;">None</p>';
-          const pickHtml = picks.length ? picks.map(miniCard).join("") : '<p class="empty-msg" style="padding:10px 0;">None</p>';
-
-          return `<div class="loc-group">
-            <div class="loc-heading ${locClass}">${loc} (${rowsAll.length})</div>
+          const cls = loc === "Nelson Point" ? "nelson" : loc === "Finucane Island" ? "finucane" : "";
+          const mini = (r) => cardHtml(r, [vesselSpan(r), esc(r.berthDisplay), esc(r.username), partnerBit(r)]);
+          const none = '<p class="empty-msg">None</p>';
+          return `<div class="loc-block ${cls}">
+            <div class="loc-heading ${cls}">${esc(loc)} <span class="n">${rowsAll.length}</span></div>
             <div class="mini-split">
               <div>
                 <div class="mini-split-heading drop">Drop-off (${drops.length})</div>
-                <div class="card-grid">${dropHtml}</div>
+                <div class="card-grid">${drops.length ? drops.map(mini).join("") : none}</div>
               </div>
               <div>
                 <div class="mini-split-heading pick">Pickup (${picks.length})</div>
-                <div class="card-grid">${pickHtml}</div>
+                <div class="card-grid">${picks.length ? picks.map(mini).join("") : none}</div>
               </div>
             </div>
           </div>`;
         }).join("");
 
-        const shiftRangeLabel = shiftName === "Day" ? "06:00–18:00" : "18:00–06:00";
-        const shiftIcon = shiftName === "Day" ? "☀️" : "🌙";
-        return `<div class="shift-heading">${shiftIcon} ${shiftName} Shift <span class="range">${shiftRangeLabel} · ${shiftRows.length}</span></div>${locHtml}`;
+        const range = shiftName === "Day" ? "06:00–18:00" : "18:00–06:00";
+        const icon = shiftName === "Day" ? "☀️" : "🌙";
+        return `<div class="shift-heading">${icon} ${shiftName} shift <span class="range">${range} · ${shiftRows.length}</span></div><div class="loc-row">${blocks}</div>`;
       }).join("");
 
       const p = dateParts(sd);
@@ -945,10 +953,7 @@
       const nPick = rowsForDate.filter(r => r.role === "Analyst").length;
       return `<section class="date-group">
         <div class="date-banner">
-          <div>
-            <div class="date-main"><span class="date-dow">${p.dow}</span><span class="date-full">${p.long}</span>${relTagHtml(sd)}</div>
-            <div class="date-sub">Shift day · 06:00 to 06:00 next morning</div>
-          </div>
+          <div class="date-main"><span class="date-dow">${p.dow}</span><span class="date-full">${p.long}</span>${relTagHtml(sd)}<span class="date-sub">Shift day 06:00 → 06:00</span></div>
           <div class="date-stats">
             <span><b>${rowsForDate.length}</b> scans</span>
             <span><span class="dot drop"></span><b>${nDrop}</b> drop-off</span>
@@ -1090,7 +1095,7 @@
       </section>`;
     }).join("");
 
-    el.innerHTML = chipHtml + hint + (groupHtml || '<p class="empty-msg">No bags in this group.</p>');
+    el.innerHTML = chipHtml + hint + (groupHtml ? '<div class="ver-groups">' + groupHtml + '</div>' : '<p class="empty-msg">No bags in this group.</p>');
   }
   $("verifyView").addEventListener("click", (e) => {
     const chip = e.target.closest(".ver-chip");
@@ -1133,6 +1138,30 @@
     });
     body.innerHTML = html;
   }
+
+  // ---------- display size + spacing (remembered in this browser) ----------
+  const UI_KEY = "pmlb_viewer_ui_v1";
+  const UI_STEPS = [0.85, 0.92, 1, 1.1, 1.22, 1.35];
+  const uiState = { step: 2, compact: false };
+  try {
+    const saved = JSON.parse(localStorage.getItem(UI_KEY) || "{}");
+    if (Number.isInteger(saved.step) && saved.step >= 0 && saved.step < UI_STEPS.length) uiState.step = saved.step;
+    uiState.compact = !!saved.compact;
+  } catch (e) {}
+  function applyUi() {
+    const root = document.documentElement.style;
+    root.setProperty("--ui", UI_STEPS[uiState.step]);
+    root.setProperty("--d", uiState.compact ? 0.6 : 1);
+    $("textSmaller").disabled = uiState.step === 0;
+    $("textLarger").disabled = uiState.step === UI_STEPS.length - 1;
+    $("compactBtn").classList.toggle("active", uiState.compact);
+    try { localStorage.setItem(UI_KEY, JSON.stringify(uiState)); } catch (e) {}
+    syncBarHeight();
+  }
+  $("textSmaller").addEventListener("click", () => { if (uiState.step > 0) { uiState.step--; applyUi(); } });
+  $("textLarger").addEventListener("click", () => { if (uiState.step < UI_STEPS.length - 1) { uiState.step++; applyUi(); } });
+  $("compactBtn").addEventListener("click", () => { uiState.compact = !uiState.compact; applyUi(); });
+  applyUi();
 
   setView("overview");
 </script>
